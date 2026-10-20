@@ -1,0 +1,62 @@
+div {
+  background-color: rgb(255, 165, 0);
+  width: 500px;
+  padding: 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  background-color: rgb(103, 158, 128);
+  padding: 0 20px 0 50px;
+}
+
+li {
+  background-repeat: no-repeat;
+  background-position: left 7px;
+  background-size: 30px;
+  padding-left: 40px;
+  background-image: url("icons/checklist.png"); /* по умолчанию для главных */
+}
+
+ul ul {
+  font-size: 18px;
+  font-style: italic;
+  background-color: rgb(153, 180, 102);
+  padding-left: 40px;
+}
+
+ul ul li {
+  margin-bottom: 10px;
+}
+
+span {
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+ul span {
+  font-size: 20px;
+  font-weight: 700;
+  background-color: rgb(199, 124, 106);
+  margin-bottom: 10px;
+}
+
+ul ul span {
+  background-color: rgb(218, 106, 32);
+}
+
+.mobile   { background-image: url("icons/mobile.png"); }
+.plane    { background-image: url("icons/airplane_ticket.png"); }
+.hotel    { background-image: url("icons/hotel.png"); }
+.car      { background-image: url("icons/car_rental.png"); }
+.bar      { background-image: url("icons/local_bar.png"); }
+.casino   { background-image: url("icons/casino.png"); }
+.museum   { background-image: url("icons/museum.png"); }
+.festival { background-image: url("icons/festival.png"); }
