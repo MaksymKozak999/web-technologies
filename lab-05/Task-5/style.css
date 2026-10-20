@@ -1,0 +1,76 @@
+body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+section:nth-of-type(1) div {
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  padding: 20px;
+  border: 5px solid #1e6fa8;
+  background-color: #d6ebf8;
+  margin: 20px;
+}
+
+section:nth-of-type(1) div:nth-of-type(1) {
+  box-sizing: content-box;
+}
+
+section:nth-of-type(1) div:nth-of-type(2) {
+  box-sizing: border-box;
+}
+
+section:nth-of-type(2) div {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  max-height: 80px;
+  border: 2px solid #124a73;
+  background-color: #eaf5fc;
+  margin: 0 20px 60px 0;
+}
+
+section:nth-of-type(2) div:nth-of-type(1) { overflow: visible; }
+section:nth-of-type(2) div:nth-of-type(2) { overflow: hidden; }
+section:nth-of-type(2) div:nth-of-type(3) { overflow: scroll; }
+section:nth-of-type(2) div:nth-of-type(4) { overflow: auto; }
+
+section:nth-of-type(3) ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #1e6fa8;
+}
+
+section:nth-of-type(3) ul > li {
+  display: inline-block;
+}
+
+section:nth-of-type(3) ul > li > a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+section:nth-of-type(3) ul > li > a:hover {
+  background-color: #124a73;
+}
+
+/* Приховуємо третій пункт ("Послуги").
+   display: none повністю прибирає елемент із потоку документа: він не
+   відображається, не займає місця, сусідні елементи зсуваються на його місце,
+   і його не бачать скрінрідери.
+   Інші способи приховування відрізняються:
+   -visibility:hidden: елемент невидимий, але залишається в потоці і займає місце;
+   -opacity:0: елемент прозорий, займає місце і залишається клікабельним;
+   -position: absolute; left: -9999px: елемент виноситься за екран, але існує
+     і доступний скрінрідерам. */
+section:nth-of-type(3) ul > li:nth-child(3) {
+  display: none;
+}

@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background-color: #1b2a41;
+  background-image: url("img/pic.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+/* Коли вікно вужче за 320px, контейнер не стискається нижче min-width,
+   тому він стає ширшим за вікно: з'являється горизонтальна прокрутка
+   і частина контенту виходить за межі видимої області. */
+main {
+  box-sizing: border-box;
+  max-width: 900px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+/* Рядкові (inline) елементи не приймають width і height, тому
+   значення 200px і 100px не діють: розмір визначається вмістом. */
+.inline-demo div {
+  display: inline;
+  width: 200px;
+  height: 100px;
+  background-color: #9fd3f5;
+}
+
+.block-demo {
+  margin-top: 20px;
+}
+.block-demo span {
+  display: block;
+  width: 150px;
+  margin-bottom: 5px;
+  background-color: #f5c89f;
+}
+
+.repeat {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  margin: 0 10px 10px 0;
+  border: 2px solid #1e6fa8;
+  background-image: url("img/kit.jpg");
+  font-weight: bold;
+}
+.repeat-x     { background-repeat: repeat-x; }
+.repeat-y     { background-repeat: repeat-y; }
+.repeat-space { background-repeat: space; }
+.repeat-round { background-repeat: round; }
+/* space: зображення НЕ масштабується, вміщається ціла кількість плиток,
+   а залишок місця розподіляється порожніми проміжками між ними.
+   round: кількість плиток теж ціла, але вільне місце не лишається:
+   плитки розтягуються або стискаються, щоб заповнити весь блок. */
+
+.scale {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 300px;
+  height: 200px;
+  margin: 0 10px 10px 0;
+  border: 2px solid #1e6fa8;
+  background-image: url("img/kit1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-weight: bold;
+}
+.size-contain { background-size: contain; }
+.size-cover   { background-size: cover; }
+
+.scroll {
+  box-sizing: border-box;
+  max-height: 150px;
+  overflow: auto;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 2px solid #1e6fa8;
+  background-image: url("img/pic.jpg");
+}
+/* scroll: фон прив'язаний до самого блоку і НЕ рухається, коли
+   прокручується вміст усередині (рухається лише разом із блоком на сторінці).
+   local: фон прив'язаний до вмісту, тому прокручується разом із текстом. */
+.att-scroll { background-attachment: scroll; }
+.att-local  { background-attachment: local; }
