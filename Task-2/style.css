@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #ccc;
+    min-width: 500px;
+    min-height: 250px;
+}
+
+/* Загальні стилі для блоків */
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    border: 2px solid #000000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Блок 1: зелений, завжди видимий */
+.block-1 {
+    width: 120px;
+    height: 40px;
+    background-color: #00b050;
+    cursor: pointer;
+}
+
+/* Блок 2: синій, початково прихований */
+.block-2 {
+    width: 120px;
+    height: 200px;
+    background-color: #4472c4;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Блок 3: фіолетовий, початково прихований */
+.block-3 {
+    width: 120px;
+    height: 200px;
+    background-color: #7030a0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* --- Логіка появи за допомогою :hover та суміжних селекторів --- */
+
+/* При наведенні на Блок 1 з'являється Блок 2 */
+.block-1:hover + .block-2 {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* При наведенні безпосередньо на Блок 2 він залишається видимим */
+.block-2:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* При наведенні на Блок 2 (або якщо курсор утримується на ньому) з'являється Блок 3 */
+.block-2:hover + .block-3 {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* При наведенні безпосередньо на Блок 3 він та Блок 2 залишаються видимими */
+.block-3:hover {
+    opacity: 1;
+    visibility: visible;
+}
